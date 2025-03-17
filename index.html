@@ -101,14 +101,15 @@
     <!-- Contact -->
     <section id="contact" class="p-10">
         <h2 class="text-4xl font-semibold text-center mb-6">Neem Contact Op</h2>
-        <form action="mailto:yvisualmedia@gmail.com" method="post" enctype="text/plain" class="max-w-lg mx-auto flex flex-col gap-4">
+        <form id="contact-form" class="max-w-lg mx-auto flex flex-col gap-4">
             <input type="text" name="naam" placeholder="Naam" class="p-4 border border-gray-500 rounded bg-gray-800 text-white">
             <input type="email" name="email" placeholder="E-mail" class="p-4 border border-gray-500 rounded bg-gray-800 text-white">
             <textarea name="bericht" placeholder="Bericht" class="p-4 border border-gray-500 rounded bg-gray-800 text-white"></textarea>
             <button type="submit" class="bg-indigo-600 hover:bg-indigo-500 text-white p-4 rounded-lg font-semibold text-lg">Verstuur</button>
         </form>
+        <p id="success-message" class="text-center text-green-500 hidden">Je bericht is verzonden!</p>
     </section>
-    
+
     <!-- Footer -->
     <footer class="text-center p-6 text-gray-400 bg-black bg-opacity-80">
         <p>© 2025 YVisual Media - Alle rechten voorbehouden</p>
@@ -118,6 +119,27 @@
             <a href="mailto:yvisualmedia@gmail.com" class="hover:text-gray-300">E-mail</a>
         </div>
     </footer>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const naam = document.querySelector("input[name='naam']").value;
+            const email = document.querySelector("input[name='email']").value;
+            const bericht = document.querySelector("textarea[name='bericht']").value;
+            
+            if (naam === "" || email === "" || bericht === "") {
+                alert("Vul alle velden in voordat je het bericht verstuurt.");
+                return;
+            }
+            
+            // Simulatie van een succesvol verzonden bericht
+            document.getElementById("success-message").classList.remove("hidden");
+            
+            // Leeg het formulier na verzending
+            document.getElementById("contact-form").reset();
+        });
+    </script>
 
     <script>
         function toggleAboutText() {
