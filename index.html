@@ -35,7 +35,7 @@
         <nav>
             <ul class="flex gap-6 text-lg">
                 <li><a href="#portfolio" class="hover:text-gray-400">Portfolio</a></li>
-                <li><a href="#about" class="hover:text-gray-400">Over Mij</a></li>
+                <li><a href="#about" class="hover:text-gray-400" onclick="toggleAboutText()">Over mij</a></li>
                 <li><a href="#contact" class="hover:text-gray-400">Contact</a></li>
             </ul>
         </nav>
@@ -93,6 +93,15 @@
             <a href="mailto:yvisualmedia@gmail.com" class="hover:text-gray-300">E-mail</a>
         </div>
     </footer>
+
+    <script>
+        function toggleAboutText() {
+            let aboutText = document.getElementById("about-text");
+            aboutText.classList.toggle("hidden");
+        }
+        
+        document.getElementById("about-title").addEventListener("click", toggleAboutText);
+    </script>
 
     <script>
         document.getElementById("about-title").addEventListener("click", function() {
