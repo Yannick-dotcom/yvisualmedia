@@ -35,7 +35,7 @@
         <nav>
             <ul class="flex gap-6 text-lg">
                 <li><a href="#portfolio" class="hover:text-gray-400">Mijn Werk</a></li>
-                <li><a href="#about" class="hover:text-gray-400" onclick="toggleAboutText()">Over mij</a></li>
+                <li><a href="#about" class="hover:text-gray-400">Over mij</a></li>
                 <li><a href="#contact" class="hover:text-gray-400">Contact</a></li>
             </ul>
         </nav>
@@ -90,7 +90,7 @@
     <!-- Over Mij -->
     <section id="about" class="p-10 bg-gray-800">
         <h2 id="about-title" class="text-4xl font-semibold text-center mb-6 cursor-pointer">Over mij</h2>
-        <p id="about-text" class="text-center max-w-2xl mx-auto text-lg hidden">Leuk dat je een kijkje neemt op mijn website! Wie ben ik? Ik ben Yannick van der Steen, ik ben 23 jaar oud en ik heb al mijn hele leven een passie voor fotografie. Sinds een aantal jaar maak ik foto's van omgeving en af en toe (portret) foto's van mensen. Ben jij geïnteresseerd en wil je een mooie nieuwe foto maken tegen een schappelijke prijs, neem dan contact met mij op via het contactformulier of via Instagram of LinkedIn. Ik hoor graag van je!</p>
+        <p id="about-text" class="text-center max-w-2xl mx-auto text-lg">Leuk dat je een kijkje neemt op mijn website! Wie ben ik? Ik ben Yannick van der Steen, ik ben 23 jaar oud en ik heb al mijn hele leven een passie voor fotografie. Sinds een aantal jaar maak ik foto's van omgeving en af en toe (portret) foto's van mensen. Ben jij geïnteresseerd en wil je een mooie nieuwe foto maken tegen een schappelijke prijs, neem dan contact met mij op via het contactformulier of via Instagram of LinkedIn. Ik hoor graag van je!</p>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
             <img src="https://i.imgur.com/JhK0UIQ.jpeg" alt="Over mij 1" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
             <img src="https://i.imgur.com/yE6CQaL.jpeg" alt="Over mij 2" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
@@ -128,12 +128,7 @@
         document.getElementById("about-title").addEventListener("click", toggleAboutText);
     </script>
 
-    <script>
-        document.getElementById("about-title").addEventListener("click", function() {
-            let aboutText = document.getElementById("about-text");
-            aboutText.classList.toggle("hidden");
-        });
-    </script>
+    
 
     <script>
         let index = 0;
