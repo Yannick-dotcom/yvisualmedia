@@ -69,8 +69,8 @@
     
     <!-- Over Mij -->
     <section id="about" class="p-10 bg-gray-800">
-        <h2 class="text-4xl font-semibold text-center mb-6">Over Mij</h2>
-        <p class="text-center max-w-2xl mx-auto text-lg">Ik ben een gepassioneerde fotograaf die graag de schoonheid van het moment vastlegt. Mijn werk draait om het vertellen van visuele verhalen die impact maken.</p>
+        <h2 id="about-title" class="text-4xl font-semibold text-center mb-6 cursor-pointer">Over mij</h2>
+        <p id="about-text" class="text-center max-w-2xl mx-auto text-lg hidden">Leuk dat je een kijkje neemt op mijn website! Wie ben ik? Ik ben Yannick van der Steen, ik ben 23 jaar oud en ik heb al mijn hele leven een passie voor fotografie. Sinds een aantal jaar maak ik foto's van omgeving en af en toe (portret) foto's van mensen. Ben jij geïnteresseerd en wil je een mooie nieuwe foto maken tegen een schappelijke prijs, neem dan contact met mij op via het contactformulier of via Instagram of LinkedIn. Ik hoor graag van je!</p>
     </section>
     
     <!-- Contact -->
@@ -93,6 +93,13 @@
             <a href="mailto:yvisualmedia@gmail.com" class="hover:text-gray-300">E-mail</a>
         </div>
     </footer>
+
+    <script>
+        document.getElementById("about-title").addEventListener("click", function() {
+            let aboutText = document.getElementById("about-text");
+            aboutText.classList.toggle("hidden");
+        });
+    </script>
 
     <script>
         let index = 0;
