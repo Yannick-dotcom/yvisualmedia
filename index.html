@@ -31,9 +31,7 @@
     
     <!-- Header -->
     <header class="w-full p-6 flex justify-between items-center bg-black bg-opacity-50 fixed top-0 left-0 right-0 z-50">
-        <h1 class="text-3xl font-bold">
-            <a href="#" class="hover:text-gray-400">YVisual Media</a>
-        </h1>
+        <h1 class="text-3xl font-bold">YVisual Media</h1>
         <nav>
             <ul class="flex gap-6 text-lg">
                 <li><a href="#portfolio" class="hover:text-gray-400">Mijn Werk</a></li>
@@ -58,7 +56,48 @@
             </a>
         </div>
     </section>
-
+    
+    <!-- Portfolio Sectie -->
+    <section id="portfolio" class="p-10">
+        <h2 class="text-4xl font-semibold text-center mb-6">Mijn Werk</h2>
+        
+        <!-- Formule 1 -->
+        <h3 class="text-3xl font-semibold text-center mt-10">Formule 1</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+            <img src="https://i.imgur.com/2aopVPO.jpeg" alt="Formule 1 - 1" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            <img src="https://i.imgur.com/g3Kmdk8.jpeg" alt="Formule 1 - 2" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            <img src="https://i.imgur.com/IOlU5v8.jpeg" alt="Formule 1 - 3" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            <img src="https://i.imgur.com/79plSFZ.jpeg" alt="Formule 1 - 4" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            <img src="https://i.imgur.com/Fv16zvg.jpeg" alt="Formule 1 - 5" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        </div>
+        
+        <!-- Feesten en Partijen -->
+        <h3 class="text-3xl font-semibold text-center mt-10">Feesten en Partijen</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+            <img src="https://i.imgur.com/di1E5Uh.jpeg" alt="Feesten - 1" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            <img src="https://i.imgur.com/MlFsuxI.jpeg" alt="Feesten - 2" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            <img src="https://i.imgur.com/h5XVfqh.jpeg" alt="Feesten - 3" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        </div>
+        
+        <!-- Omgeving -->
+        <h3 class="text-3xl font-semibold text-center mt-10">Omgeving</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+            <img src="https://i.imgur.com/CrxONCf.jpeg" alt="Omgeving - 1" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            <img src="https://i.imgur.com/iyyW53F.jpeg" alt="Omgeving - 2" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        </div>
+    </section>
+    
+    <!-- Over Mij -->
+    <section id="about" class="p-10 bg-gray-800">
+        <h2 id="about-title" class="text-4xl font-semibold text-center mb-6 cursor-pointer">Over mij</h2>
+        <p id="about-text" class="text-center max-w-2xl mx-auto text-lg">Leuk dat je een kijkje neemt op mijn website! Wie ben ik? Ik ben Yannick van der Steen, ik ben 23 jaar oud en ik heb al mijn hele leven een passie voor fotografie. Sinds een aantal jaar maak ik foto's van omgeving en af en toe (portret) foto's van mensen. Ben jij geïnteresseerd en wil je een mooie nieuwe foto maken tegen een schappelijke prijs, neem dan contact met mij op via het contactformulier of via Instagram of LinkedIn. Ik hoor graag van je!</p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+            <img src="https://i.imgur.com/JhK0UIQ.jpeg" alt="Over mij 1" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            <img src="https://i.imgur.com/yE6CQaL.jpeg" alt="Over mij 2" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            <img src="https://i.imgur.com/royKXpN.jpeg" alt="Over mij 3" class="rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+        </div>
+    </section>
+    
     <!-- Contact -->
     <section id="contact" class="p-10">
         <h2 class="text-4xl font-semibold text-center mb-6">Neem Contact Op</h2>
@@ -75,10 +114,38 @@
     <footer class="text-center p-6 text-gray-400 bg-black bg-opacity-80">
         <p>© 2025 YVisual Media - Alle rechten voorbehouden</p>
         <div class="mt-4 flex justify-center gap-6">
-            <a href="https://www.instagram.com/yvisualmedia" target="_blank" class="hover:text-gray-300">Instagram</a>
+            <a href="https://www.instagram.com/yvisualmedia?igsh=Yml2OThyZm92eTZn&utm_source=qr" target="_blank" class="hover:text-gray-300">Instagram</a>
             <a href="https://www.linkedin.com/in/yannick-van-der-steen-a2b0b6175" target="_blank" class="hover:text-gray-300">LinkedIn</a>
             <a href="mailto:yvisualmedia@gmail.com" class="hover:text-gray-300">E-mail</a>
         </div>
     </footer>
+
+    
+
+    <script>
+        function toggleAboutText() {
+            let aboutText = document.getElementById("about-text");
+            aboutText.classList.toggle("hidden");
+        }
+        
+        document.getElementById("about-title").addEventListener("click", toggleAboutText);
+    </script>
+
+    
+
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll(".fade");
+
+        function showSlides() {
+            slides.forEach((slide, i) => {
+                slide.classList.remove("active");
+            });
+            slides[index].classList.add("active");
+            index = (index + 1) % slides.length;
+        }
+        setInterval(showSlides, 4000);
+    </script>
+    
 </body>
 </html>
